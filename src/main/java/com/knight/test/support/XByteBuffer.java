@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package me.threedr3am.exp.support;
+package com.knight.test.support;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

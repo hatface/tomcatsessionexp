@@ -14,36 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package me.threedr3am.exp.support;
+package com.knight.test.support;
 
-public abstract class ClusterMessageBase implements ClusterMessage {
+import java.io.Serializable;
 
-    private static final long serialVersionUID = 1L;
-
-    private long timestamp;
-    protected transient Member address;
-
-    public ClusterMessageBase() {
-        // NO-OP
-    }
-
-    @Override
-    public Member getAddress() {
-        return address;
-    }
-
-    @Override
-    public long getTimestamp() {
-        return timestamp;
-    }
-
-    @Override
-    public void setAddress(Member member) {
-        this.address = member;
-    }
-
-    @Override
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
-    }
+public interface ClusterMessage extends Serializable {
+    public Member getAddress();
+    public void setAddress(Member member);
+    public String getUniqueId();
+    public long getTimestamp();
+    public void setTimestamp(long timestamp);
 }
